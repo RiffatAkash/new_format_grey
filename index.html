@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;background-size: 100% 100%;background-repeat: no-repeat;user-select: none;}
+        .wrapper{width: 300px;height: 250px;position: relative;cursor: grab;overflow: hidden;}
+        .absolute{position: absolute;}
+        .patch_box{height: 250px;width: 300px;top: 0;left: 0;transition: all 1s ease-in-out;}
+        .container{position: absolute;width: 300px;height: 250px;}
+        .imgBx{position: absolute;width: 300px;height: 250px;}
+        .grey{filter: grayscale(100%);}
+        .color{width: 0;transition: 4s;overflow: hidden;border-right: 2px solid #262626;}
+        .animation{
+            animation-name: animation;animation-duration: 4s;animation-iteration-count: infinite; animation-direction: alternate;
+        }
+        /* .container:hover .color{
+            width: auto;
+        } */
+        @keyframes animation {
+            from{
+                width: 0%;
+            }
+            to{
+                width: 100%;    
+            }
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="imgBx grey">
+            <img src="bg1.png">
+        </div>
+        <div class="imgBx color animation">
+            <img src="bg1.png">
+        </div>
+    </div>
+</body>
+</html>
